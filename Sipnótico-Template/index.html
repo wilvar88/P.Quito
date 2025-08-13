@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Hotspots – Local</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Demo de hotspots con tooltips (local, sin internet)</h1>
+    <p class="hint">Pasa el cursor por los puntos azules para ver las descripciones.
+      Presiona <kbd>E</kbd> para activar el <strong>modo coordenadas</strong> (te copia al
+      portapapeles el % X,Y donde hagas clic para que crees más puntos).</p>
+  </header>
+
+  <main id="board" aria-label="Imagen con puntos interactivos">
+    <img id="base" src="img/Pantalla-SAE.png" alt="Imagen base" />
+    <div id="hotspots" aria-live="polite"></div>
+    <div id="coords" hidden></div>
+  </main>
+
+  <footer>
+    <details>
+      <summary>¿Cómo edito/duplico esta página?</summary>
+      <ol>
+        <li>Reemplaza <code>img/Pantalla-SAE.png</code> por tu imagen (mismo nombre o cambia la ruta en el HTML).</li>
+        <li>Edita <code>data.js</code> y agrega/quita objetos en <code>HOTSPOTS</code>.
+          Usa valores de <strong>x</strong> y <strong>y</strong> en porcentaje (0–100) para que sea responsivo.</li>
+        <li>Abre este archivo <code>index.html</code> con doble clic. No necesita servidor.</li>
+        <li>Para más páginas, duplica la carpeta y cambia la imagen y los hotspots.</li>
+      </ol>
+    </details>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
